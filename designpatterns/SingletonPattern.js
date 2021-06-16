@@ -1,3 +1,6 @@
+/**
+ * FoodLogger Class
+ */
 class FoodLogger {
   foodLog = [];
   log(order) {
@@ -8,6 +11,9 @@ class FoodLogger {
   }
 }
 
+/**
+ * SingletonFoodLogger Class
+ */
 class SingletonFoodLogger {
   constructor() {
     if (!SingletonFoodLogger.instance) {
@@ -21,6 +27,8 @@ class SingletonFoodLogger {
 }
 
 //---------------------------------------------------------
+// Test the design pattern
+
 const foodLogger1 = new SingletonFoodLogger().getInstance();
 foodLogger1.log("Ordered Mobile");
 
