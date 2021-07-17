@@ -10,6 +10,7 @@ const sumUsingMyReduce = [1, 2, 3, 4].myreduce((acc, elem) => acc + elem, 0);
 console.log("sumUsingReduce", sumUsingReduce);
 console.log("sumUsingMyReduce", sumUsingMyReduce);
 
+//---------------------------------------------------------------------------------
 //2. bind
 
 Function.prototype.mybind = function (...args) {
@@ -28,7 +29,9 @@ let myBindMethod = getName.mybind(obj);
 console.log("Native bind:", "Name=" + bindMethod());
 console.log("My bind:", "Name=" + myBindMethod());
 
+//---------------------------------------------------------------------------------
 //3. debounce
+
 function debounce(func, timeout = 300) {
   let timer;
   return (...args) => {
@@ -37,6 +40,8 @@ function debounce(func, timeout = 300) {
   };
 }
 const processChange = debounce(() => console.log("hello"));
+
+//---------------------------------------------------------------------------------
 
 //4. throttling
 function throttle(func, timeout = 300) {
